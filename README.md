@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a [Vagrant](https://www.vagrantup.com/) configuration to set up a complete, virtualized development environment 
+This is a [Vagrant](https://www.vagrantup.com/) configuration to set up a virtualized development environment 
 for JHipster users.
 
 1. [Usage](#usage)
