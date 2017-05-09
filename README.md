@@ -1,0 +1,1 @@
+# jhipster_dev_box_centos
