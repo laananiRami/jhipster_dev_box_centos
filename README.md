@@ -1,4 +1,4 @@
-# JHipster official "development box"
+# JHipster "development box" in Contos
 
 ## Introduction
 
