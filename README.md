@@ -35,6 +35,8 @@ The "Quick installation" provides a pre-build Virtual Machine, and the "Manual i
 
 ### Quick installation
 
+If you like to use a linux-like console on a Windows host without a lot of fuzz? Try out [Babun](http://babun.github.io/)!
+
 Pre-built distributions of this "development box" are available on [Atlas](https://atlas.hashicorp.com/centos/boxes/7).
 
 To install the latest distribution, please run:
