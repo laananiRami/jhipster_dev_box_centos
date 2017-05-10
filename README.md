@@ -1,4 +1,4 @@
-# JHipster "development box" in Contos
+# JHipster "development box" on Centos
 
 ## Introduction
 
