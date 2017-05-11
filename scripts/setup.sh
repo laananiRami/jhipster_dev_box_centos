@@ -39,61 +39,22 @@ npm install -g npm
 
 # install yarn
 npm install -g yarn
-su -c "yarn config set prefix /home/vagrant/.yarn-global" vagrant
+yarn config set prefix /home/vagrant/.yarn-global
 
 # install yeoman grunt bower gulp
-su -c "yarn global add yo bower gulp" vagrant
+npm install -g yo bower gulp
 
 # install JHipster
-su -c "yarn global add generator-jhipster" vagrant
+npm install -g generator-jhipster
+
 
 # install JHipster UML
-su -c "yarn global add jhipster-uml" vagrant
+npm install -g jhipster-uml
 
 
 ################################################################################
 # Install the development tools
 ################################################################################
-
-# install ruby (for heroku)
-yum -y install ruby
-
-# install Heroku toolbelt
-su -c "wget -qO https://toolbelt.heroku.com/install.sh | sh" vagrant
-
-heroku = "whereis  heroku"
-
-echo "$heroku"
-
-echo '"PATH=$heroku:$PATH"' >> /etc/profile.d/heruko.sh
-source /etc/profile.d/heruko.sh
-
-
-# install Guake
-#apt-get install -y guake
-#cp /usr/share/applications/guake.desktop /etc/xdg/autostart/
-
-# install jhipster-devbox
-#git clone git://github.com/jhipster/jhipster-devbox.git /home/vagrant/jhipster-devbox
-#chmod +x /home/vagrant/jhipster-devbox/tools/*.sh
-
-
-
-# install zsh
-sudo yum -y install  zsh
-
-
-# install Visual Studio Code
-su -c 'umake ide visual-studio-code /home/vagrant/.local/share/umake/ide/visual-studio-code --accept-license' vagrant
-
-
-#install IDEA community edition
-su -c 'umake ide idea /home/vagrant/.local/share/umake/ide/idea' vagrant
-
-
-
-
-
 
 # install latest Docker
 curl -sL https://get.docker.io/ | sh
@@ -105,26 +66,6 @@ chmod +x /usr/local/bin/docker-compose
 # configure docker group (docker commands can be launched without sudo)
 usermod -aG docker vagrant
 
-# fix ownership of home
-chown -R vagrant:vagrant /home/vagrant/
-################################################################################
-# Install the graphical environment
-################################################################################
-
-# force encoding
- echo 'LANG=en_US.UTF-8' >> /etc/environment
- echo 'LANGUAGE=en_US.UTF-8' >> /etc/environment
- echo 'LC_ALL=en_US.UTF-8' >> /etc/environment
- echo 'LC_CTYPE=en_US.UTF-8' >> /etc/environment
-
-# # run GUI as non-privileged user
- echo 'allowed_users=anybody' > /etc/X11/Xwrapper.config
-
-# # install Ubuntu desktop and VirtualBox guest tools
- yum -y install  virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
-
-# yum -y groups install "GNOME desktop"
-# startx
 
 # clean the box
 yum -y autoclean
